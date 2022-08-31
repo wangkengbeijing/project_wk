@@ -1,0 +1,82 @@
+{
+    "cmpItemName": "安徽通道-通航设施尺度架空过江管线查询列表",
+    "interfaceUrl": "/listOverheadRiverPipeline",
+    "settings": {
+        "title": "架空过江管线",
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "query": {},
+            "params": [
+                {
+                    "targetName": "架空过江管线名称",
+                    "targetCode": "nameKeyWord",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "type": "index",
+                "datasetName": "list",
+                "headerCells": [
+                    {
+                        "label": "架空过江管线名称",
+                        "prop": "gxmc"
+                    },
+                    {
+                        "label": "管理单位名称",
+                        "prop": "gldwName"
+                    },
+                    {
+                        "label": "所属水道",
+                        "prop": "scsdName"
+                    },
+                    {
+                        "label": "航道里程",
+                        "prop": "hdlc"
+                    },
+                    {
+                        "label": "设计最高通航水位",
+                        "prop": "zgthsw"
+                    },
+                    {
+                        "label": "垂弧最低点高程",
+                        "prop": "chzddgc"
+                    },
+                    {
+                        "label": "通航净高",
+                        "prop": "thjg"
+                    }
+                ]
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": [
+                    {
+                        "propName": "ferryplacemanagername",
+                        "dotStyle": {
+                            "width": "6px",
+                            "height": "6px",
+                            "backgroundColor": "#FF6E6E",
+                            "borderRadius": "50%",
+                            "marginRight": "14px"
+                        }
+                    }
+                ]
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

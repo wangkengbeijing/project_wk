@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div.static {
+            width: 200px;
+            height: 200px;
+            position: static;
+            display: block;
+            margin-left: 20px;
+            padding-top: 20px;
+            padding-left: 20px;
+            background-color: brown;
+            border: #4516c7 3px solid;
+        }
+
+        div.relative {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            left: 10px;
+            background-color: aqua;
+            border: 3px solid #73AD21;
+            /* display: flex; */
+        }
+
+        div.absolute {
+            position: absolute;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border: 3px solid #73AD21;
+            /* display: inline; */
+        }
+
+        div.overflow {
+            background-color: #eee;
+            width: 100px;
+            height: 100px;
+            border: 1px dotted black;
+            /*
+            visible - 默认。溢出没有被剪裁。内容在元素框外渲染 
+            hidden - 溢出被剪裁，其余内容将不可见 
+            scroll - 溢出被剪裁，同时添加滚动条以查看其余内容 
+            auto - 与 scroll 类似，但仅在必要时添加滚动条 */
+            /* overflow: auto; */
+
+            /* 隐藏水平滚动栏 */
+            overflow-x: hidden;
+            /* overflow-x: scroll; */
+            /* 添加垂直滚动栏 */
+            /* overflow-y: scroll; */
+            
+        }
+    </style>
+</head>
+hidden
+
+<body>
+
+    <h1>position: absolute;</h1>
+
+    <p>设置 position: absolute; 的元素会相对于最近的定位祖先进行定位（而不是相对于视口进行定位，比如 fixed）：</p>
+
+    <div class="relative">
+        这个 div 元素设置 position: relative;
+        <div class="static">
+            sdfdsfds
+            sdfdsfds
+            <div class="absolute">这个 div 元素设置 position: absolute;</div>
+        </div>
+
+    </div>
+    <h1>CSS 溢出</h1>
+    <p>默认情况下，溢出是可见的，这意味着它不会被裁剪，而是在元素框外渲染：</p>
+
+    <div class="overflow">当您想更好地控制布局时，可以使用 overflow 属性。overflow 属性规定如果内容溢出元素框会发生什么情况。</div>
+</body>
+
+</html>

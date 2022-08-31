@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        ol {
+            background: #ff9999;
+            padding: 20px;
+            list-style-position: inside;
+        }
+
+        ul {
+            background: #3399ff;
+            padding: 20px;
+            list-style-position: outside;
+            list-style-type: none;
+        }
+
+        ol li {
+            background: #ffe5e5;
+            padding: 5px;
+            margin-left: 10px;
+
+        }
+
+        ul li {
+            background: #cce5ff;
+            margin: 5px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>设置列表的颜色样式：</h1>
+
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li id="coca">Coca Cola</li>
+    </ul>
+    <p id="demo"></p>
+    <script>
+        function normalizedItems(items = [], parent) {
+
+            let res = items.map(item => {
+                console.log(`name : ${item.name}`)
+                return item.name;
+            })
+            console.log(`res : ${res}`)
+            return items;
+        }
+        document.getElementById("demo").innerHTML = 'John Doe';
+        const resources = []
+        resources.push({
+            name: '张三',
+            count: 10
+        })
+        resources.push({
+            name: '李四',
+            count: 11
+        })
+        resources.push({
+            name: '王二',
+            count: 12
+        })
+        resources.push({
+            name: '麻子',
+            count: 13
+        })
+        // let s = resources.reduce((sum, current) => { //累加器(sum, current, index) sum：累加结果，当前值， 当前索引， 0初始值
+
+        //     Object.assign([])
+        //     console.log(sum)
+        //     console.log(current)
+        //     return sum
+        // }, 0)
+        const items = normalizedItems(resources);
+
+        document.getElementById('coca').innerText = items + "";
+        const name = ["item.firstname", "item.lastname"]
+        console.log(`${name}`)
+
+        var keyObj1 = {}
+        var keyObj2 = {}
+        console.log(keyObj1 === keyObj2)
+
+        var myMap = new Map();
+        myMap.set(0, "zero");
+        myMap.set(1, "one");
+
+        // 将会显示两个 log。 一个是 "0 = zero" 另一个是 "1 = one"
+        for (var [key, value] of myMap) {
+            console.log(key + " = " + value);
+        }
+        for (var [key, value] of myMap.entries()) {
+            console.log(key + " = " + value);
+        }
+
+        const sa = [
+            ["key1", "value1"],
+            ["key2", "value2"]
+        ]
+
+        const map = new Map(sa)
+        for (const [key, value] of map) {
+            console.log(key, value);
+        }
+        map.forEach((value, key) => {
+            console.log(key, value);
+        });
+        let arr = ["a", "b"]
+        let mySet = new Set(arr);
+
+        // mySet.add('a'); // Set(1) {1}
+        // mySet.add('b'); // Set(2) {1, 5}
+        // mySet.add('b'); // Set(2) {1, 5} 这里体现了值的唯一性
+
+        // mySet.forEach((v, k) => {
+        //     console.log("-----v:", v, "-----k:", k);
+        // });
+        mySet.forEach(function (v, k) {
+            console.log("-----v:", v, "-----k:", k);
+        })
+        // let index = 0
+        for (let index = 0; index < 10; index++) {
+            console.log("--------", index)
+            setTimeout(function () {
+                console.log(index)
+            }, 500);
+
+        }
+    </script>
+
+</body>
+
+
+</html>

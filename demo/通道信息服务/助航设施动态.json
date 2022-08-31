@@ -1,0 +1,79 @@
+{
+    "cmpItemName": "安徽通道-安徽助航设施动态列表",
+    "interfaceUrl": "/listAirNavigationalAid",
+    "settings": {
+        "title": "助航设施动态列表",
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "params": [
+                {
+                    "targetName": "选择日期",
+                    "targetCode": "TimeSection",
+                    "dataType": "TimeSection",
+                    "defaultVal": null
+                },
+                {
+                    "targetName": "航标名称",
+                    "targetCode": "name",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "datasetName": "list",
+                "type": "index",
+                "headerCells": [
+                    {
+                        "label": "航标名称",
+                        "prop": "mc"
+                    },
+                    {
+                        "label": "管理单位",
+                        "prop": "departName"
+                    },
+                    {
+                        "label": "所属水道",
+                        "prop": "channelName"
+                    },
+                    {
+                        "label": "异动类型",
+                        "prop": "ydlxName"
+                    },
+                    {
+                        "label": "异动时间",
+                        "prop": "ydsj"
+                    }
+                ]
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": [
+                    {
+                        "propName": "ferryplacemanagername",
+                        "dotStyle": {
+                            "width": "6px",
+                            "height": "6px",
+                            "backgroundColor": "#FF6E6E",
+                            "borderRadius": "50%",
+                            "marginRight": "14px"
+                        }
+                    }
+                ]
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

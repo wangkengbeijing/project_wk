@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学习案例一</title>
+    <style>
+        body {
+            color: red;
+            text-align: center;
+            background-image: url('https://static.runoob.com/images/mix/gradient2.png');
+            /* 如果图像只在水平方向平铺 (repeat-x), 页面背景会更好些: */
+            /* background-repeat: repeat-x; */
+            margin-right: 200px;
+
+        }
+
+
+        #para1 {
+            text-align: center;
+            color: blue;
+            background-color: chartreuse;
+        }
+
+        /* 
+background	简写属性，作用是将背景属性设置在一个声明中。
+background-attachment	背景图像是否固定或者随着页面的其余部分滚动。
+background-color	设置元素的背景颜色。
+background-image	把图像设置为背景。
+background-position	设置背景图像的起始位置。
+background-repeat	设置背景图像是否及如何重复。
+*/
+
+        #para2 {
+            text-align: center;
+            color: blue;
+            height: 500px;
+            background-image: url('https://static.runoob.com/images/mix/img_tree.png');
+            background-repeat: no-repeat;
+            /* ackground-position 属性改变图像在背景中的位置: */
+            background-position: center top;
+            background-color: darkgray;
+            margin-top: 30px;
+            /* 简写 */
+            /* background: #ffffff url('https://static.runoob.com/images/mix/img_tree.png') no-repeat center top; */
+
+        }
+
+        .center {
+            text-align: center;
+            background-color: yellow;
+            /* 默认情况下，背景图像进行平铺重复显示，以覆盖整个元素实体. */
+            background-image: url('https://static.runoob.com/images/mix/paper.gif');
+        }
+
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="para1">di选择器 para1 你好啊</p>
+    <p id="para2">di选择器 para2 你好啊</p>
+    <p>这个段落采用CSS样式化。</p>
+    <p class="center">这个段落采用class CSS样式化。</p>
+</body>
+
+</html>

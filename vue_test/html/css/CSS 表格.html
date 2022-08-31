@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            /* border: 1px solid black; */
+            height: 70px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+
+        td {
+            border: 1px solid black;
+            /* 水平对齐 */
+            text-align: center;
+            height: 70px;
+            /* 垂直对齐 */
+            vertical-align: bottom;
+            padding: 25px;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Let the borders collapse</h1>
+
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr>
+            <td>Bill</td>
+            <td>Gates</td>
+        </tr>
+        <tr>
+            <td>Steve</td>
+            <td>Jobs</td>
+        </tr>
+
+        <tr>
+            <th>Elon</th>
+            <th>Musk</th>
+        </tr>
+        <tr>
+            <td>Bill</td>
+            <td>$100</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>JavaScript "this"</h2>
+
+  <p>此例演示在常规函数中，“this”关键字代表不同的对象，具体取决于函数的调用方式。</p>
+
+  <p>点击按钮再次执行“hello”函数，你会看到这次“this”代表的是 button 对象。</p>
+
+  <button id="btn">点击我！</button>
+
+  <p id="demo"></p>
+
+  <script>
+    var hello;
+
+    hello = function () {
+      document.getElementById("demo").innerHTML += this;
+    }
+
+    //window 对象调用函数：
+    window.addEventListener("load", hello);
+
+    //button 对象调用函数：
+    document.getElementById("btn").addEventListener("click", hello);
+
+
+    class Hero {
+      constructor(heroName) {
+        this.heroName = heroName;
+      }
+
+      // logName = () => {
+
+      //   console.log(this)
+      //   console.log(this.heroName);
+      // }
+
+      logName() {
+
+        console.log("---" + this)
+      }
+    }
+
+    const batman = new Hero('Batman');
+
+    setTimeout(batman.logName, 1000);   // after 1 second logs "Batman"
+  </script>
+
+</body>
+
+</html>

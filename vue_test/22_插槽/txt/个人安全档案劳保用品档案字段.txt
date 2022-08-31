@@ -1,0 +1,160 @@
+package com.ienc.platform.modules.common.feign.dto.synthetical;
+
+import com.baomidou.mybatisplus.annotation.FieldStrategy;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.Max;
+import java.io.Serializable;
+
+/**
+ * 用品领用记录表
+ *
+ * @author xiehui
+ * @email okxiehui@gmail.com
+ * @date 2021-10-11 13:38:47
+ */
+@Data
+  /**
+     * 人员id
+     */
+    @TableId
+    @ApiModelProperty(value = "人员id", name = "id", dataType = "String")
+    private String id;
+    /**
+     * 人员名称
+     */
+    @ApiModelProperty(value = "人员名称", name = "name", dataType = "String")
+    private String name;
+    /**
+     * 联系电话
+     */
+    @ApiModelProperty(value = "联系电话", name = "mobile", dataType = "String")
+    private String mobile;
+    /**
+     * 工种
+     */
+    @ApiModelProperty(name = "工种", notes = "")
+    private String workType;
+
+    /**
+     * 分包单位
+     */
+    @ApiModelProperty(value = "分包单位", name = "mobile", dataType = "String")
+    private String professionalCompanyName;
+
+    /**
+     * 项目部名称
+     */
+    @ApiModelProperty(value = "项目部", name = "projectDeptName", dataType = "String")
+    private String projectDeptName;
+    /**
+     * 项目部名称
+     */
+    @ApiModelProperty(value = "劳保用品", name = "SuppliesGroupDtoList", dataType = "List")
+    private  List<SuppliesGroupDto> SuppliesGroupDtoList;
+
+
+
+public class SuppliesGroupDto implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * 主键
+     */
+    @TableId
+    @Length(max = 36, message = "主键最大长度为36")
+    @ApiModelProperty(value = "主键", name = "id", dataType = "String")
+    private String id;
+    /**
+     * 劳动用品名称
+     */
+    @Length(max = 100, message = "劳动用品名称最大长度为100")
+    @ApiModelProperty(value = "劳动用品名称", name = "name", dataType = "String")
+    private String name;
+    /**
+     * 型号(规格)
+     */
+    @Length(max = 100, message = "型号(规格)最大长度为100")
+    @ApiModelProperty(value = "型号(规格)", name = "type", dataType = "String")
+    private String type;
+
+    /**
+     * 有效期
+     */
+    @Max(value = 2147483647, message = "有效期最大为2147483647")
+    @ApiModelProperty(value = "有效期", name = "effectiveDate", dataType = "Integer")
+    @TableField(updateStrategy = FieldStrategy.IGNORED)
+    private Integer effectiveDate;
+    /**
+     * 公司id
+     */
+    @Length(max = 36, message = "公司id最大长度为36")
+    @ApiModelProperty(value = "公司id", name = "orgId", dataType = "String")
+    private String orgId;
+    /**
+     * 创建时间
+     */
+    @Length(max = 20, message = "创建时间最大长度为20")
+    @ApiModelProperty(value = "创建时间", name = "createTime", dataType = "String")
+    private String createTime;
+    /**
+     * 创建者
+     */
+    @Length(max = 36, message = "创建者最大长度为36")
+    @ApiModelProperty(value = "创建者", name = "createUser", dataType = "String")
+    private String createUser;
+
+    @ApiModelProperty(value = "领用日期", name = "useTime", dataType = "String")
+    private String useTime;
+    /**
+     * 更新时间
+     */
+    @Length(max = 20, message = "更新时间最大长度为20")
+    @ApiModelProperty(value = "更新时间", name = "updateTime", dataType = "String")
+    private String updateTime;
+    /**
+     * 更新者
+     */
+    @Length(max = 36, message = "更新者最大长度为36")
+    @ApiModelProperty(value = "更新者", name = "updateUser", dataType = "String")
+    private String updateUser;
+    /**
+     * 状态 0=删除 1=正常
+     */
+    @Max(value = 2147483647, message = "状态 0=删除 1=正常最大为2147483647")
+    @ApiModelProperty(value = "状态 0=删除 1=正常", name = "state", dataType = "Integer")
+    private Integer state;
+    /**
+     * 到期时间(废弃,不再保存)
+     */
+    @Deprecated
+    @Length(max = 20, message = "到期时间最大长度为20")
+    @ApiModelProperty(value = "到期时间", name = "expireTime", dataType = "String")
+    private String expireTime;
+    /**
+     * 创建人部门id
+     */
+    private String departId;
+    /**
+     * 创建人id
+     */
+    private String personId;
+
+    /**
+     * 单位
+     */
+    @ApiModelProperty(name = "单位", notes = "")
+    private String unit;
+
+    /**
+     * 有效期(字符串)
+     */
+
+    @ApiModelProperty(value = "", name = "effectiveDateStr", dataType = "String")
+    private String effectiveDateStr;
+    ;
+}

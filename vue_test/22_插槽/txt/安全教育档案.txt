@@ -1,0 +1,199 @@
+/**
+     * 考试分数
+     */
+    @ApiModelProperty(value = "考试分数", name = "score", dataType = "Integer")
+    private Integer score;
+
+
+    /**
+     * t_exam_plan_people 表主键
+     */
+    @ApiModelProperty(value = "t_exam_plan_people 表主键", name = "examPlanPeopleId", dataType = "String")
+    private String examPlanPeopleId;
+
+
+    /**
+     * 考试计划实例id
+     */
+    @ApiModelProperty(value = "考试计划实例id", name = "examPlanPeopleId", dataType = "String")
+    private String examPlanExampleId;
+ private static final long serialVersionUID = 1L;
+
+    /**
+     * id
+     */
+    @TableId
+    @Length(max = 36, message = "id最大长度为36")
+    @ApiModelProperty(value = "id", name = "id", dataType = "String")
+    private String id;
+    /**
+     * 企业ID
+     */
+    @Length(max = 36, message = "企业ID最大长度为36")
+    @ApiModelProperty(value = "企业ID", name = "orgId", dataType = "String")
+    private String orgId;
+    /**
+     * 名称
+     */
+    @Length(max = 100, message = "名称最大长度为100")
+    @ApiModelProperty(value = "名称", name = "name", dataType = "String")
+    private String name;
+    /**
+     * 说明
+     */
+    @Length(max = 200, message = "说明最大长度为200")
+    @ApiModelProperty(value = "说明", name = "description", dataType = "String")
+    private String description;
+    /**
+     * 培训类型 0=专项安全教育 1=三级安全教育 2=日常安全教育
+     */
+    @Max(value = 2147483647, message = "培训类型最大为2147483647")
+    @ApiModelProperty(value = "培训类型 0=专项安全教育 1=三级安全教育 2=日常安全教育", name = "trainType", dataType = "Integer")
+    private Integer trainType;
+    /**
+     * 培训时间始
+     */
+    @Length(max = 20, message = "培训时间始最大长度为20")
+    @ApiModelProperty(value = "培训时间始", name = "startDate", dataType = "String")
+    private String startDate;
+    /**
+     * 培训时间止
+     */
+    @Length(max = 20, message = "培训时间止最大长度为20")
+    @ApiModelProperty(value = "培训时间止", name = "endDate", dataType = "String")
+    private String endDate;
+    /**
+     * 考评人员范围类型（0.全部，1.小组）
+     */
+    @Max(value = 2147483647, message = "考评人员范围类型（0.全部，1.小组）最大为2147483647")
+    @ApiModelProperty(value = "考评人员范围类型（0.全部，1.小组）", name = "extent", dataType = "Integer")
+    private Integer extent;
+    /**
+     * 培训总学时
+     */
+    @Max(value = 2147483647, message = "培训总学时最大为2147483647")
+    @ApiModelProperty(value = "培训总学时", name = "totalHours", dataType = "BigDecimal")
+    private BigDecimal totalHours;
+    /**
+     * 是否考试 0=不考试 1=考试
+     */
+    @Max(value = 2147483647, message = "是否考试最大为2147483647")
+    @ApiModelProperty(value = "是否考试", name = "isExam", dataType = "Integer")
+    private Integer isExam;
+    /**
+     * 创建时间
+     */
+    @Length(max = 20, message = "创建时间最大长度为20")
+    @ApiModelProperty(value = "创建时间", name = "createTime", dataType = "String")
+    private String createTime;
+    /**
+     * 创建者
+     */
+    @Length(max = 36, message = "创建者最大长度为36")
+    @ApiModelProperty(value = "创建者", name = "createUser", dataType = "String")
+    private String createUser;
+    /**
+     * 更新时间
+     */
+    @Length(max = 20, message = "更新时间最大长度为20")
+    @ApiModelProperty(value = "更新时间", name = "updateTime", dataType = "String")
+    private String updateTime;
+    /**
+     * 更新者
+     */
+    @Length(max = 36, message = "更新者最大长度为36")
+    @ApiModelProperty(value = "更新者", name = "updateUser", dataType = "String")
+    private String updateUser;
+    /**
+     * 状态
+     */
+    @Max(value = 2147483647, message = "状态最大为2147483647")
+    @ApiModelProperty(value = "状态", name = "state", dataType = "Integer")
+    private Integer state;
+    /**
+     * SYSCODE
+     */
+    @Length(max = 20, message = "SYSCODE最大长度为20")
+    @ApiModelProperty(value = "SYSCODE", name = "syscode", dataType = "String")
+    private String syscode;
+    /**
+     * RESERVERD
+     */
+    @Length(max = 200, message = "RESERVERD最大长度为200")
+    @ApiModelProperty(value = "RESERVERD", name = "reserverd", dataType = "String")
+    private String reserverd;
+    /**
+     * 部门id
+     */
+    @Length(max = 36, message = "部门id最大长度为36")
+    @ApiModelProperty(value = "deptId", name = "deptId", dataType = "String")
+    private String deptId;
+    /**
+     * 计划状态 0=未开始 1=进行中 2=结束
+     */
+    @Max(value = 2, message = "计划状态 0=未开始 1=进行中 2=结束")
+    @ApiModelProperty(value = "计划状态 0=未开始 1=进行中 2=结束", name = "startState", dataType = "Integer")
+    private Integer startState;
+
+    /**
+     * 考试id
+     */
+    @Max(value = 2, message = "考试id")
+    @ApiModelProperty(value = "考试id", name = "examPlanId", dataType = "Integer")
+    private String examPlanId;
+
+    /**
+     * 培训课件类型id
+     */
+    @Max(value = 2, message = "培训课件类型id")
+    @ApiModelProperty(value = "培训课件类型id", name = "coursewareTypeId", dataType = "Integer")
+    private String coursewareTypeId;
+
+    /**
+     * 是否线上 0=线上 1=线下
+     */
+    @Length(max = 36, message = "是否线上最大长度为36")
+    @ApiModelProperty(value = "是否线上 0=线上 1=线下", name = "isOnLine", dataType = "String")
+    private Integer isOnLine;
+
+    /**
+     * 授课人
+     */
+    @ApiModelProperty(value = "授课人", name = "lecturer", dataType = "String")
+    private String lecturer;
+
+    /**
+     * 地点
+     */
+    @ApiModelProperty(value = "地点", name = "address", dataType = "String")
+    private String address;
+
+
+    /**
+     * 考试实例ID
+     */
+    @ApiModelProperty(value = "考试实例ID", name = "examPlanExampleId", dataType = "String")
+    private String examPlanExampleId;
+    /**
+     * 创建人id
+     */
+    private String personId;
+    /**
+     * 组织领导
+     */
+    private String groupLeader;
+    /**
+     * 参加人员
+     */
+    private String joinPerson;
+    /**
+     * 培训目的
+     */
+    private String purpose;
+    /**
+     * 部门名称
+     */
+    private String deptName;
+
+    /** 创建人名称 */
+    private String personName ;

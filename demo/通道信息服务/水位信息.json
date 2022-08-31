@@ -1,0 +1,93 @@
+{
+    "cmpItemName": "安徽通道-水位检测预报-水位信息-列表",
+    "interfaceUrl": "/getStageInformation",
+    "settings": {
+        "title": "水位信息",
+        "isBorder": false,
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "params": [
+                {
+                    "targetName": "选择日期",
+                    "targetCode": "TimeSection",
+                    "dataType": "TimeSection",
+                    "defaultVal": null
+                },
+                {
+                    "targetName": "水位站",
+                    "targetCode": "stationName",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "type": "index",
+                "datasetName": "list",
+                "headerCells": [
+                    {
+                        "label": "水位站名称",
+                        "prop": "stageName"
+                    },
+                    {
+                        "label": "基面",
+                        "prop": "baseLevel"
+                    },
+                    {
+                        "label": "航道里程（公里）",
+                        "prop": "channelMileage"
+                    },
+                    {
+                        "label": "水位数据(米)",
+                        "prop": "waterLevelData"
+                    },
+                    {
+                        "label": "涨（+）落（-）米",
+                        "prop": "fluctuationData"
+                    },
+                    {
+                        "label": "发布时间",
+                        "prop": "publishDate"
+                    }
+                ]
+            },
+            "headerRowStyle": {
+                "background": "#F8FAFD",
+                "min-height": "40px"
+            },
+            "headerCellStyle": {
+                "font-weight": 600,
+                "color": "#17243B",
+                "fontSize": "14px"
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": [
+                    {
+                        "propName": "ferryplacemanagername",
+                        "dotStyle": {
+                            "width": "6px",
+                            "height": "6px",
+                            "backgroundColor": "#FF6E6E",
+                            "borderRadius": "50%",
+                            "marginRight": "14px"
+                        }
+                    }
+                ]
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

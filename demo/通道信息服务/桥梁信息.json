@@ -1,0 +1,78 @@
+{
+    "cmpItemName": "安徽通道-通航设施尺度桥梁信息查询列表",
+    "interfaceUrl": "/listBridgeInformation",
+    "settings": {
+        "title": "桥梁信息",
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "query": {},
+            "params": [
+                {
+                    "targetName": "桥梁名称",
+                    "targetCode": "nameKeyWord",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "type": "index",
+                "datasetName": "list",
+                "headerCells": [
+                    {
+                        "label": "桥梁名称",
+                        "prop": "qlmc"
+                    },
+                    {
+                        "label": "管理单位",
+                        "prop": "gldwName"
+                    },
+                    {
+                        "label": "所属水道",
+                        "prop": "scsdName"
+                    },
+                    {
+                        "label": "航道里程",
+                        "prop": "hdlc"
+                    },
+                    {
+                        "label": "通航净宽（米）",
+                        "prop": "thjk"
+                    },
+                    {
+                        "label": "通航净高（米）",
+                        "prop": "thjg"
+                    }
+                ]
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": [
+                    {
+                        "propName": "ferryplacemanagername",
+                        "dotStyle": {
+                            "width": "6px",
+                            "height": "6px",
+                            "backgroundColor": "#FF6E6E",
+                            "borderRadius": "50%",
+                            "marginRight": "14px"
+                        }
+                    }
+                ]
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

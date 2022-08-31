@@ -1,0 +1,66 @@
+{
+    "cmpItemName": "安徽通道-通航通知公告查询列表",
+    "interfaceUrl": "/navigationInfoList",
+    "settings": {
+        "title": "通航通知公告",
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "query": {
+                "type": 4
+            },
+            "params": [
+                {
+                    "targetName": "时间范围",
+                    "targetCode": "TimeSection",
+                    "dataType": "TimeSection",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "content": "NvInfoComponent",
+                "componentType": 1,
+                "componentConfig": {
+                    "titleList": [
+                        {
+                            "name": "发布时间",
+                            "param": "publishDate",
+                            "formatter": "YYYY-MM-DD HH:mm:ss"
+                        }
+                    ]
+                },
+                "type": "index",
+                "datasetName": "list",
+                "headerCells": [
+                    {
+                        "label": "标题",
+                        "prop": "title"
+                    },
+                    {
+                        "label": "时间",
+                        "prop": "publishDate",
+                        "width": 200,
+                        "formatter": "YYYY-MM-DD"
+                    }
+                ]
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": []
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

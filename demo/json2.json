@@ -1,0 +1,39 @@
+{
+    "icon": {
+        "type": "img",
+        "unchecked": "/assets/portalsite/map/direct-icons/icon-tu-fa-shi-jian.png",
+        "checked": "/assets/portalsite/map/direct-icons/icon-tu-fa-shi-jian-checked.png",
+        "class": "iconfont icon-shuiweizhan_all"
+    },
+    
+    "pf": [
+        "longitude",
+        "latitude"
+    ],
+    "nf": [
+        "id",
+        "pid",
+        "parentId",
+        "state",
+        "searchType",
+        "updateTime",
+        "BUILD_TIME",
+        "collectType"
+    ],
+    "details": {
+        "url": "/navigationInfoDetail",
+        "param": [
+            "id"
+        ]
+    },
+    "otherParam": [
+        {
+            "code": "name",
+            "defVal": ""
+        }
+    ],
+    "isSecond": false,
+    "it": 100,
+    "type": 0,
+    "showType": 2
+}

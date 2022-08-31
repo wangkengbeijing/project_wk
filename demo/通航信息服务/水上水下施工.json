@@ -1,0 +1,79 @@
+{
+    "cmpItemName": "广西通航-水上水下施工-列表",
+    "interfaceUrl": "/navigationInfoList",
+    "settings": {
+        "title": "水上水下施工作业",
+        
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "query": {
+                "type": 1,
+                "status": 3
+            },
+            "params": [
+                {
+                    "targetName": "选择日期",
+                    "targetCode": "TimeSection",
+                    "dataType": "TimeSection",
+                    "defaultVal": null
+                },
+                {
+                    "targetName": "标题",
+                    "targetCode": "nameKeyWord",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "content": "NvInfoComponent",
+                "componentType": 1,
+                "componentConfig": {
+                    "type": 1,
+                    "titleList": [
+                        {
+                            "name": "发布时间",
+                            "param": "publishDate",
+                            "formatter": "YYYY-MM-DD HH:mm:ss"
+                        },
+                        {
+                            "name": "发布人",
+                            "param": "publishUser"
+                        }
+                    ]
+                },
+                "type": "index",
+                "datasetName": "list",
+                "headerCells": [
+                    {
+                        "label": "标题",
+                        "prop": "title"
+                    },
+                    {
+                        "label": "时间",
+                        "prop": "publishDate",
+                        "width": 200,
+                        "formatter": "YYYY-MM-DD"
+                    }
+                ]
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": []
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

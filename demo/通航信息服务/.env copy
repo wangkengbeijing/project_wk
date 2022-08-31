@@ -1,0 +1,17 @@
+; VUE_APP_MODULE_COMMON=http://192.168.1.180:18999/common
+VUE_APP_MODULE_COMMON=http://192.168.1.180:18999
+VUE_APP_PUBLIC_PATH=http://192.168.1.180:19100
+
+VUE_APP_MAP_ARCGIS_API=http://221.7.196.185:8002/arcgis_js_api/library/3.24/3.24
+VUE_APP_MAP_ARCGIS_SERVER=http://221.7.196.185:8002/arcgis/rest/services/szhd/MapServer
+VUE_APP_MAP_ARCGIS_WATERDEEP_SERVER=http://221.7.196.185:8002/arcgis/rest/services/soundp/MapServer
+
+# 天梯图服务配置
+# 矢量图
+VUE_APP_MAP_TDT_VEC_C=https://t0.tianditu.gov.cn/vec_c/wmts
+VUE_APP_MAP_TDT_CVA_C=https://t0.tianditu.gov.cn/cva_c/wmts
+# 影像图
+VUE_APP_MAP_TDT_IMG_C=https://t0.tianditu.gov.cn/img_c/wmts
+VUE_APP_MAP_TDT_CIA_C=https://t0.tianditu.gov.cn/cia_c/wmts
+#VUE_APP_MAP_TDT_TK=edda3c16258a944ef8934c594deda432
+VUE_APP_MAP_TDT_TK=e99755c49229c60a5e15bc424d5904c6

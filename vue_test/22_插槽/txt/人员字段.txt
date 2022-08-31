@@ -1,0 +1,198 @@
+package com.ienc.platform.modules.enterInfo.model.dto;
+
+import java.io.Serializable;
+import java.util.List;
+
+import com.ienc.platform.modules.sys.entity.SysPersonCertEntity;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.Max;
+
+/**
+ * 人员信息表
+ * 
+ * @author tanqw
+ * @email oktanqw@gmail.com
+ * @date 2021-01-22 17:37:20
+ */
+@Data
+public class CmpPersonDetailDto implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * 人员编号
+	 */
+	private String id;
+	/**
+	 * 人员名称
+	 */
+	private String name;
+	/**
+	 * 手机号
+	 */
+	private String mobile;
+	/**
+	 * 身份证类型
+	 */
+	private String cardType;
+	/**
+	 * 身份证编号
+	 */
+	private String cardCode;
+	/**	
+	 * 所在部门
+	 */
+	private List<String> departDtoList;
+	/**	
+	 * 所在岗位
+	 */
+	private List<String> infoPostListVoList;
+	/**
+	 * 入职日期
+	 */
+	private String entryDate;
+	/**
+	 * 性别
+	 */
+	private String sex;
+	/**
+	 * 性别名称
+	 */
+	private String sexName;
+	/**
+	 * 出生日期
+	 */
+	private String birthday;
+	/**
+	 * 学历
+	 */
+	private String degree;
+	/**
+	 * 学历名称
+	 */
+	private String degreeName;
+	/**
+	 * 学位
+	 */
+	private String degree2;
+	/**
+	 * 学位名称
+	 */
+	private String degree2Name;
+	/**
+	 * 职称
+	 */
+	private String title;
+	/**
+	 * 职称名称
+	 */
+	private String titleName;
+	/**
+	 * 密码
+	 */
+	private String passWord;
+	/**
+	 * 所属部门Id
+	 */
+	private String departId;
+	/**
+	 * 所属部门名称
+	 */
+	private String departName;
+	/**
+	 * 所在岗位Id
+	 */
+	private String postId;
+	/**
+	 * 所在岗位名称
+	 */
+	private String postName;
+	/**
+	 * 就职单位
+	 */
+	private String orgId;
+	/**
+	 * 就职单位
+	 */
+	private String orgName;
+	/**
+	 * 通讯地址
+	 */
+	private String address;
+	/**
+	 * 文件Id
+	 */
+	private List<String> fileIdList;
+	/**
+	 * 文件路径
+	 */
+	private List<String> filePathList;
+
+	/**
+	 * 备注
+	 */
+	@Length(max = 500, message = "备注最大长度为500")
+	@ApiModelProperty(value = "备注", name = "remark", dataType = "String")
+	private String remark;
+	/**
+	 * 年龄
+	 */
+	@Max(value = 2147483647, message = "年龄最大为2147483647")
+	@ApiModelProperty(value = "年龄", name = "age", dataType = "Integer")
+	private Integer age;
+	/**
+	 * 工种
+	 */
+	@Length(max = 255, message = "工种最大长度为255")
+	@ApiModelProperty(value = "工种", name = "workType", dataType = "String")
+	private String workType;
+	/**
+	 * 进场日期
+	 */
+	@Length(max = 20, message = "进场日期最大长度为20")
+	@ApiModelProperty(value = "进场日期", name = "personEntryDate", dataType = "String")
+	private String personEntryDate;
+	/**
+	 * 在场状态 0=在场 1=不在场
+	 */
+	@Max(value = 2147483647, message = "在场状态 0=在场 1=不在场最大为2147483647")
+	@ApiModelProperty(value = "在场状态 0=在场 1=不在场", name = " presentState", dataType = "Integer")
+	private Integer presentState;
+	/**
+	 * 特种作业人员证件节点
+	 */
+	@ApiModelProperty(value = "特种作业人员证件节点", name = " sysPersonCert", dataType = "Object")
+	private SysPersonCertEntity sysPersonCert;
+	/**
+	 * 是否需要签到
+	 */
+	@ApiModelProperty(value = "是否需要签到", name = " need", dataType = "Integer")
+	private Integer need;
+
+	/** 户口所在地 */
+	@ApiModelProperty(name = "户口所在地",notes = "")
+	private String domicilePlace ;
+	/** 现工作单位或部门 */
+	@ApiModelProperty(name = "现工作单位或部门",notes = "")
+	private String workUnits ;
+	/** 从事本工种时间 */
+	@ApiModelProperty(name = "从事本工种时间",notes = "")
+	private String typeWorkTime ;
+	/** 应急联系人 */
+	@ApiModelProperty(name = "应急联系人",notes = "")
+	private String emergencyPerson ;
+	/** 应急联系电话 */
+	@ApiModelProperty(name = "应急联系电话",notes = "")
+	private String emergencyMobile ;
+	/** 出生地 */
+	@ApiModelProperty(name = "出生地",notes = "")
+	private String birthplace ;
+	/** 户口所在地 */
+	@ApiModelProperty(name = "户口所在地",notes = "")
+	private String residentCity ;
+	/** 工作时间 */
+	@ApiModelProperty(name = "工作时间",notes = "")
+	private String workingTime ;
+}

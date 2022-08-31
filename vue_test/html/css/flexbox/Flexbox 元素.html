@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .flex-container1 {
+      display: flex;
+      /* row 值设置水平堆叠 flex 项目（从左到右）： */
+      flex-direction: row;
+      
+      /* row-reverse 值设置水平堆叠 flex 项目（从右到左）： */
+      /* flex-direction: row-reverse; */
+      
+      /* column 值设置垂直堆叠 flex 项目（从上到下）： */
+      /* flex-direction: column; */
+      /* column 值设置垂直堆叠 flex 项目（从下到上）： */
+      /* flex-direction: column-reverse; */
+
+     
+      /* flex-start 值将 flex 项目在容器的开头对齐（默认）： */
+      /* justify-content: center; */
+      /* stretch 值拉伸 flex 项目以填充容器（默认）： */
+      /* align-items: stretch; */
+      /* baseline 值使 flex 项目基线对齐： */
+      /* align-items: baseline; */
+      background-color: DodgerBlue;
+      /* space-around 值显示行之前、之间和之后带有空格的 flex 项目： */
+      /* justify-content: space-around; */
+      /* space-between 值显示行之间有空格的 flex 项目： */
+      /* justify-content: space-between; */
+
+   
+    }
+
+    .flex-container1>div {
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      /* align-items 属性用于垂直对齐 flex 项目。 */
+      align-items: center;
+      /* baseline 值使 flex 项目基线对齐： */
+      /* align-items: baseline; */
+      height: 50px;
+      width: 50px;
+      margin: 10px;
+      font-size: 30px;
+    }
+
+    .flex-container2 {
+      /* flex-wrap 属性规定是否应该对 flex 项目换行。 */
+      display: flex;
+      /* justify-content 属性用于水平对齐 flex 项目： */
+      /* align-items用于设置侧轴上的子元素排列方式（单行） */
+      /* align-items 属性用于垂直对齐 flex 项目。 */
+      align-items: center;
+      /* row 值设置水平堆叠 flex 项目（从左到右）： */
+      flex-direction: row;
+      /* row-reverse 值设置水平堆叠 flex 项目（从右到左）： */
+      /* flex-direction: row-reverse; */
+      /* column 值设置垂直堆叠 flex 项目（从上到下）： */
+      /* flex-direction: column; */
+      /* column 值设置垂直堆叠 flex 项目（从下到上）： */
+      /* wrap 值规定 flex 项目将在必要时进行换行： */
+      flex-wrap: wrap;
+      /* wrap-reverse 值规定如有必要，弹性项目将以相反的顺序换行 */
+      /* flex-wrap: wrap-reverse; */
+      /* nowrap 值规定将不对 flex 项目换行（默认） */
+   /* flex-start 值在容器开头显示弹性线： */
+   /* align-content 属性用于对齐弹性线。 用于设置侧轴上的子元素排列方式（多行） */
+      /* align-content   显示弹性线 与flex-wrap: wrap一起使用*/
+      /* align-content: flex-start; */
+
+      
+      background-color: DodgerBlue;
+    }
+
+    .flex-container2>div {
+      background: #f1f1f1;
+      display: flex;
+      /* justify-content 属性用于水平对齐 flex 项目： */
+      justify-content: center;
+      /* align-items 属性用于垂直对齐 flex 项目。 */
+      align-items: center;
+      height: 50px;
+      width: 50px;
+      margin: 10px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="flex-container1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+  </div>
+  <div class="flex-container1">
+    <div>
+      <h2>1</h2>
+    </div>
+    <div>
+      <h6>2</h6>
+    </div>
+    <div>
+      <h3>3</h3>
+    </div>
+    <div><small>4</small></div>
+  </div>
+  <div class="flex-container2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </div>
+
+  <p>弹性布局中必须有一个 <em>display</em> 属性设置为 <em>flex</em> 的父元素。</p>
+
+  <p>弹性容器的直接子元素会自动成为弹性项目。</p>
+
+</body>
+
+</html>

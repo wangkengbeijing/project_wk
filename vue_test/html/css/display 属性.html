@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        li {
+            display: inline;
+        }
+
+        span {
+            display: block;
+        }
+
+        h1.hidden {
+            visibility: hidden;
+            /* display: none; */
+        }
+
+        div.ex1 {
+            width: 300px;
+            border: 3px solid red;
+        }
+
+        div.ex2 {
+            max-width: 300px;
+            margin: auto;
+            border: 3px solid blue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 块级元素（block element）
+        块级元素总是从新行开始，并占据可用的全部宽度（尽可能向左和向右伸展）。
+        这个 <div> 元素属于块级元素。
+            块级元素的一些例子：
+
+        <div>
+        <h1> - <h6>
+        <p>
+        <form>
+        <header>
+        <footer>
+        <section> -->
+
+
+
+    <!-- 行内元素（inline element）
+        内联元素不从新行开始，仅占用所需的宽度。
+        这是段落中的行内 <span> 元素。
+        行内元素的一些例子：
+        <span>
+        <a>
+        <img> -->
+    <span>值为 "block" 的 display 属性会导致</span>
+    <span>两元素间的换行。</span>
+
+    <ul>
+        <li><a href="/html/default.asp" target="_blank">HTML</a></li>
+        <li><a href="/css/default.asp" target="_blank">CSS</a></li>
+        <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
+    </ul>
+
+    <h1>这是可见的标题</h1>
+    <h1 class="hidden">这是隐藏的标题</h1>
+    <p>请注意，隐藏的标题仍然占据空间。</p>
+    
+<div class="ex1">这个 div 元素的宽度是：500px;</div>
+<div class="ex2">这个 div 元素的最大宽度是：500px;</div>
+</body>
+
+</html>

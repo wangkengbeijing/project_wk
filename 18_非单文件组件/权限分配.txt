@@ -1,0 +1,13 @@
+http://192.168.1.178:10000/admin/resources
+http://192.168.1.178:10000/systemConfiguration/role
+admin  pw123456
+
+18600882304  pwd123456
+
+https://safety.ienc.cn/admin/resources
+https://safety.ienc.cn/systemConfiguration/role
+admin  pw123456
+
+
+
+

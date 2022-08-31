@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .div1 {
+            width: 200px;
+            height: 50px;
+            margin: 5px;
+            border: 3px solid #73AD21;
+            background-color: chartreuse;
+        }
+
+        .div2 {
+            float: right;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            border: 3px solid rgb(17, 100, 100);
+            background-color: aqua;
+        }
+
+        .div3 {
+            float: right;
+            width: 50px;
+            height: 100px;
+            margin: 5px;
+            border: 3px solid rgb(236, 125, 125);
+            background-color: #bbb;
+        }
+
+        .div4 {
+            float: right;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            border: 3px solid #5f0e0e;
+            background-color: #ff0000;
+        }
+
+
+        .div5 {
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            border: 3px solid rgb(45, 7, 80);
+            clear: right;
+            background-color: blueviolet;
+        }
+
+        .div6 {
+            float: left;
+            width: 50px;
+            height: 100px;
+            margin: 5px;
+            border: 3px solid rgb(119, 119, 4);
+            background-color: yellow;
+            clear: left;
+        }
+
+        .div7 {
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            border: 3px solid rgb(7, 59, 7);
+            background-color: green;
+        }
+
+        .div8 {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            clear: both;
+            border: 3px solid rgb(7, 59, 7);
+            background-color: green;
+        }
+
+
+        .div9 {
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            border: 3px solid rgb(7, 59, 7);
+            background-color: chocolate;
+        }
+        .div10 {
+            width: 50px;
+            height: 100px;
+            margin: 5px;
+            border: 3px solid rgb(7, 59, 7);
+            background-color: darkorchid;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>不使用 clear</h1>
+
+    <!-- 假如某个div元素A是浮动的，如果A元素上一个元素也是浮动的，
+        那么A元素会跟随在上一个元素的后边(如果一行放不下这两个元素，
+        那么A元素会被挤到下一行)；如果A元素上一个元素是标准流中的元素，那么A的相对垂直位置不会改变，也就是说A的顶部总是和上一个元素的底部对齐。 -->
+    <div class="div1">div1</div>
+
+    <div class="div2">div2</div>
+    <div class="div3">div3</div>
+    <div class="div4">div4</div>
+    <!-- 可以看出div2的右边有一个浮动元素div1，那么我们可以在div2的CSS样式中使用clear:right;
+        来指定div2的右边不允许出现浮动元素，这样div2就被迫下移一行，排到div1下边。 -->
+    <div class="div5">div5</div>
+    <div class="div6">div6</div>
+    <div class="div7">div7</div>
+    <div class="div8">div8</div>
+    <div class="div9">div9</div>
+    <div class="div10">div10</div>
+
+</body>
+
+</html>

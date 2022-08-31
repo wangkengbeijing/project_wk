@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>初识Vue</title>
+	<div class="deee">
+		<div style="width: 20px; height: 20px; background-color: red; margin: 20px 20px;">1</div>
+		<div style="width: 20px; height: 20px; background-color: red;margin: 20px 20px;">2</div>
+		<div style="width: 20px; height: 20px; background-color: red;margin: 20px 20px;">3</div>
+	</div>
+
+	<!-- 引入Vue -->
+	<script type="text/javascript" src="../js/vue.js">
+
+
+	</script>
+	<style lang="scss">
+		.deee {
+			display: flex;
+			justify-content: flex-end;
+			flex: row nowrap;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 
+			初识Vue：
+				1.想让Vue工作，就必须创建一个Vue实例，且要传入一个配置对象；
+				2.root容器里的代码依然符合html规范，只不过混入了一些特殊的Vue语法；
+				3.root容器里的代码被称为【Vue模板】；
+				4.Vue实例和容器是一一对应的；
+				5.真实开发中只有一个Vue实例，并且会配合着组件一起使用；
+				6.{{xxx}}中的xxx要写js表达式，且xxx可以自动读取到data中的所有属性；
+				7.一旦data中的数据发生改变，那么页面中用到该数据的地方也会自动更新；
+
+				注意区分：js表达式 和 js代码(语句)
+						1.表达式：一个表达式会产生一个值，可以放在任何一个需要值的地方：
+									(1). a
+									(2). a+b
+									(3). demo(1)
+									(4). x === y ? 'a' : 'b'
+
+						2.js代码(语句)
+									(1). if(){}
+									(2). for(){}
+		-->
+
+	<!-- 准备好一个容器 -->
+	<div id="demo">
+		<h1>Hello，{{name.toUpperCase()}}，{{address}}</h1>
+	</div>
+
+	<script type="text/javascript">
+		Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+
+		//创建Vue实例
+		let vm = new Vue({
+			el: '#demo', //el用于指定当前Vue实例为哪个容器服务，值通常为css选择器字符串。
+			data: { //data中用于存储数据，数据供el所指定的容器去使用，值我们暂时先写成一个对象。
+				name: 'atguigu',
+				address: '北京'
+			}
+		})
+
+		let a = ['1', '2', '3']
+
+		console.log(a.join(','))
+
+		let ew1 = [
+			[
+				117.24861099662259,
+				31.887740474324676
+			],
+			[
+				117.23185685042291,
+				31.858626708984378
+			],
+			[
+				117.27964738195762,
+				31.843520507812503
+			]
+		]
+		let ew2 = new Array(ew1)
+		console.log(JSON.stringify(ew2))
+
+		let sw1 = [
+			[
+				[117.22832063024863, 31.897628170684914],
+				[117.215961011108, 31.851760253906253],
+				[117.27391388777643, 31.85340819893405],
+				[117.22832063024863, 31.897628170684914]
+			]
+		]
+		console.log('--------------三维转二维----------------')
+		let sw2 = sw1.flat(1)
+		console.log(JSON.stringify(sw2))
+	</script>
+</body>
+
+</html>

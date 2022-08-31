@@ -1,0 +1,88 @@
+{
+    "cmpItemName": "安徽通航-突发事件-列表",
+    "interfaceUrl": "/navigationInfoList",
+    "settings": {
+        "title": "突发事件",
+        "isBorder": false,
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "query": {
+                "type": 0,
+                "status": 3
+            },
+            "params": [
+                {
+                    "targetName": "选择日期",
+                    "targetCode": "TimeSection",
+                    "dataType": "TimeSection",
+                    "defaultVal": null
+                },
+                {
+                    "targetName": "标题名称",
+                    "targetCode": "nameKeyWord",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "content": "NvInfoComponent",
+                "componentType": 1,
+                "componentConfig": {
+                    "type": 0,
+                    "titleList": [
+                        {
+                            "name": "发布时间",
+                            "param": "publishDate",
+                            "formatter": "YYYY-MM-DD HH:mm:ss"
+                        },
+                        {
+                            "name": "发布人",
+                            "param": "publishUser"
+                        }
+                    ]
+                },
+                "type": "index",
+                "datasetName": "list",
+                "headerCells": [
+                    {
+                        "label": "标题",
+                        "prop": "title"
+                    },
+                    {
+                        "label": "时间",
+                        "prop": "publishDate",
+                        "width": 200,
+                        "formatter": "YYYY-MM-DD"
+                    }
+                ]
+            },
+            "headerRowStyle": {
+                "background": "#F8FAFD",
+                "min-height": "40px"
+            },
+            "headerCellStyle": {
+                "font-weight": 600,
+                "color": "#17243B",
+                "fontSize": "14px"
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": []
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

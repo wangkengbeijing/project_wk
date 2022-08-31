@@ -1,0 +1,125 @@
+package com.ienc.platform.modules.safety.entity;
+
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.hibernate.validator.constraints.Length;
+import javax.validation.constraints.Max;
+import java.io.Serializable;
+import java.util.Date;
+import lombok.Data;
+
+/**
+ * 安全奖罚档案
+ * 
+ * @author ls
+ * @date 2022-08-24 13:55:27
+ */
+@Data
+@TableName("t_safety_reward_punishment")
+@ApiModel(value="SafetyRewardPunishment")
+public class SafetyRewardPunishmentEntity implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * 主键
+	 */
+	@TableId
+		@Length(max = 36,message = "主键最大长度为36")
+	@ApiModelProperty(value = "主键",name = "id",dataType="String")
+	private String id;
+	/**
+	 * 项目部id
+	 */
+		@Length(max = 36,message = "项目部id最大长度为36")
+	@ApiModelProperty(value = "项目部id",name = "departId",dataType="String")
+	private String departId;
+	/**
+	 * 人员id
+	 */
+		@Length(max = 36,message = "领用人员id最大长度为36")
+	@ApiModelProperty(value = "人员id",name = "personId",dataType="String")
+	private String personId;
+	/**
+	 * 人员名称
+	 */
+		@Length(max = 100,message = "领用人员名称最大长度为100")
+	@ApiModelProperty(value = "人员名称",name = "personName",dataType="String")
+	private String personName;
+	/**
+	 * 类型 1=奖励 2=通报 3=警告 4=罚款
+	 */
+		@Length(max = 100,message = "类型 1=奖励 2=通报 3=警告 4=罚款最大长度为100")
+	@ApiModelProperty(value = "类型 1=奖励 2=通报 3=警告 4=罚款",name = "type",dataType="String")
+	private Integer type;
+	/**
+	 * 公司id
+	 */
+		@Length(max = 36,message = "公司id最大长度为36")
+	@ApiModelProperty(value = "公司id",name = "orgId",dataType="String")
+	private String orgId;
+	/**
+	 * 创建时间
+	 */
+		@Length(max = 20,message = "创建时间最大长度为20")
+	@ApiModelProperty(value = "创建时间",name = "createTime",dataType="String")
+	private String createTime;
+	/**
+	 * 创建者
+	 */
+		@Length(max = 36,message = "创建者最大长度为36")
+	@ApiModelProperty(value = "创建者",name = "createUser",dataType="String")
+	private String createUser;
+	/**
+	 * 更新时间
+	 */
+		@Length(max = 20,message = "更新时间最大长度为20")
+	@ApiModelProperty(value = "更新时间",name = "updateTime",dataType="String")
+	private String updateTime;
+	/**
+	 * 更新者
+	 */
+		@Length(max = 36,message = "更新者最大长度为36")
+	@ApiModelProperty(value = "更新者",name = "updateUser",dataType="String")
+	private String updateUser;
+	/**
+	 * 记录人名称
+	 */
+		@Length(max = 255,message = "记录人名称最大长度为255")
+	@ApiModelProperty(value = "记录人名称",name = "createPersonName",dataType="String")
+	private String createPersonName;
+	/**
+	 * 状态;0=删除 1=正常
+	 */
+			@Max(value =2147483647, message = "状态;0=删除 1=正常最大为2147483647")
+	@ApiModelProperty(value = "状态;0=删除 1=正常",name = "state",dataType="Integer")
+	private Integer state;
+	/**
+	 * 项目部名称
+	 */
+		@Length(max = 300,message = "项目部名称最大长度为300")
+	@ApiModelProperty(value = "项目部名称",name = "departName",dataType="String")
+	private String departName;
+	/**
+	 * 记录人personId
+	 */
+		@Length(max = 36,message = "记录人personId最大长度为36")
+	@ApiModelProperty(value = "记录人personId",name = "createPersonId",dataType="String")
+	private String createPersonId;
+	/**
+	 * 记录人所属部门
+	 */
+		@Length(max = 36,message = "记录人所属部门最大长度为36")
+	@ApiModelProperty(value = "记录人所属部门",name = "createDeptId",dataType="String")
+	private String createDeptId;
+	/**
+	 * 内容
+	 */
+		@Length(max = 500,message = "内容最大长度为500")
+	@ApiModelProperty(value = "内容",name = "content",dataType="String")
+	private String content;
+	/** 发生时间 */
+	@ApiModelProperty(name = "发生时间",notes = "")
+	private String occurredTime ;
+}

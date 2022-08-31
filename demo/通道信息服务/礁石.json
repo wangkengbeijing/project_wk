@@ -1,0 +1,82 @@
+{
+    "cmpItemName": "安徽通道-通航设施尺度礁石查询列表",
+    "interfaceUrl": "/listRock",
+    "settings": {
+        "title": "礁石",
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "query": {},
+            "params": [
+                {
+                    "targetName": "礁石名称",
+                    "targetCode": "nameKeyWord",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "type": "index",
+                "datasetName": "list",
+                "headerCells": [
+                    {
+                        "label": "礁石名称",
+                        "prop": "jsmc"
+                    },
+                    {
+                        "label": "管理单位名称",
+                        "prop": "gldwName"
+                    },
+                    {
+                        "label": "所属水道",
+                        "prop": "scsdName"
+                    },
+                    {
+                        "label": "航道里程",
+                        "prop": "hdlc"
+                    },
+                    {
+                        "label": "岸别",
+                        "prop": "ab"
+                    },
+                    {
+                        "label": "岸别名称",
+                        "prop": "abName"
+                    },
+                    {
+                        "label": "礁石直径(米)",
+                        "prop": "jszj"
+                    }
+                ]
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": [
+                    {
+                        "propName": "ferryplacemanagername",
+                        "dotStyle": {
+                            "width": "6px",
+                            "height": "6px",
+                            "backgroundColor": "#FF6E6E",
+                            "borderRadius": "50%",
+                            "marginRight": "14px"
+                        }
+                    }
+                ]
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

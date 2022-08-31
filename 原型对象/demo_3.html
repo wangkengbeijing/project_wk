@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function SuperType(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        SuperType.prototype.sx_name = "属性"
+        SuperType.prototype.m_name = function () {
+
+        }
+
+        
+        function SubType(name, age, job) {
+            SuperType.call(this, name, age)
+            this.job = job
+        }
+        console.log(`-----------组合式创建------------------------`)
+        let superType = new SuperType("王五", 22);
+        console.log(`superType: ${superType}`);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+package com.ienc.platform.modules.sys.entity;
+
+import com.baomidou.mybatisplus.annotation.*;
+import com.ienc.platform.common.util.DateUtil;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.Max;
+import java.io.Serializable;
+
+/**
+ * 人员信息表
+ *
+ * @author dinghao
+ * @date 2021-01-31 11:40:37
+ */
+@Data
+@TableName("t_sys_person")
+@ApiModel(value = "SysPerson")
+public class SysPersonEntity implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * 人员编号
+     */
+    @TableId
+    @ApiModelProperty(value = "人员编号", name = "id", dataType = "String")
+    private String id;
+    /**
+     * 人员名称
+     */
+    @ApiModelProperty(value = "人员名称", name = "name", dataType = "String")
+    private String name;
+    /**
+     * 性别
+     */
+    @ApiModelProperty(value = "性别", name = "sex", dataType = "String")
+    private String sex;
+    /**
+     * 身份证类型
+     */
+    @ApiModelProperty(value = "身份证类型", name = "cardType", dataType = "String")
+    private String cardType;
+    /**
+     * 身份证编号
+     */
+    @ApiModelProperty(value = "身份证编号", name = "cardCode", dataType = "String")
+    private String cardCode;
+    /**
+     * 手机号
+     */
+    @ApiModelProperty(value = "手机号", name = "mobile", dataType = "String")
+    private String mobile;
+    /**
+     * 邮件
+     */
+    @ApiModelProperty(value = "邮件", name = "email", dataType = "String")
+    private String email;
+    /**
+     * 级别
+     */
+    @ApiModelProperty(value = "级别", name = "title", dataType = "String")
+    private String title;
+    /**
+     * 职务
+     */
+    @ApiModelProperty(value = "职务", name = "post", dataType = "String")
+    private String post;
+    /**
+     * 政治面貌
+     */
+    @ApiModelProperty(value = "政治面貌", name = "politicalVisage", dataType = "String")
+    private String politicalVisage;
+    /**
+     * 民族
+     */
+    @ApiModelProperty(value = "民族", name = "nation", dataType = "String")
+    private String nation;
+    /**
+     * 籍贯
+     */
+    @ApiModelProperty(value = "籍贯", name = "origin", dataType = "String")
+    private String origin;
+    /**
+     * 人员分类
+     */
+    @ApiModelProperty(value = "人员分类", name = "personType", dataType = "String")
+    private String personType;
+    /**
+     * 毕业院校
+     */
+    @ApiModelProperty(value = "毕业院校", name = "school", dataType = "String")
+    private String school;
+    /**
+     * 学历
+     */
+    @ApiModelProperty(value = "学历", name = "degree", dataType = "String")
+    private String degree;
+    /**
+     * 所学专业
+     */
+    @ApiModelProperty(value = "所学专业", name = "profession", dataType = "String")
+    private String profession;
+    /**
+     * 毕业时间
+     */
+    @ApiModelProperty(value = "毕业时间", name = "graduateTime", dataType = "String")
+    private String graduateTime;
+    /**
+     * 创建人
+     */
+    @ApiModelProperty(value = "创建人", name = "createUser", dataType = "String")
+    private String createUser;
+    /**
+     * 创建时间
+     */
+    @ApiModelProperty(value = "创建时间", name = "createTime", dataType = "String")
+    private String createTime;
+    /**
+     * 修改人
+     */
+    @ApiModelProperty(value = "修改人", name = "updateUser", dataType = "String")
+    private String updateUser;
+    /**
+     * 修改时间
+     */
+    @ApiModelProperty(value = "修改时间", name = "updateTime", dataType = "String")
+    private String updateTime;
+    /**
+     * 状态
+     */
+    @ApiModelProperty(value = "状态", name = "state", dataType = "Integer")
+    @TableLogic  //逻辑删除注解
+    @TableField(fill = FieldFill.INSERT)  //新增的时候自动插入，MetaObjectHandlerConfig配置文件
+    private Integer state;
+    /**
+     * 国籍
+     */
+    @ApiModelProperty(value = "国籍", name = "nationality", dataType = "String")
+    private String nationality;
+    /**
+     * 在职状态，y在职；n离职
+     */
+    @ApiModelProperty(value = "在职状态，y在职；n离职", name = "jobState", dataType = "String")
+    private String jobState;
+    /**
+     * 出生年月日
+     */
+    @ApiModelProperty(value = "出生年月日", name = "birthday", dataType = "String")
+    private String birthday;
+    /**
+     * 数据来源，1 数据中心接入
+     */
+    @ApiModelProperty(value = "数据来源，1 数据中心接入", name = "sourceType", dataType = "Integer")
+    private Integer sourceType;
+    /**
+     * 创建机构
+     */
+    @ApiModelProperty(value = "创建机构", name = "createOrg", dataType = "String")
+    private String createOrg;
+    /**
+     * 是否禁用
+     */
+    @ApiModelProperty(value = "是否禁用", name = "isDisable", dataType = "String")
+    private String isDisable;
+    /**
+     * 学位
+     */
+    @ApiModelProperty(value = "学位", name = "degree2", dataType = "String")
+    private String degree2;
+    /**
+     * 通讯地址
+     */
+    @ApiModelProperty(value = "通讯地址", name = "address", dataType = "String")
+    private String address;
+
+    /**
+     * 备注
+     */
+    @Length(max = 500, message = "备注最大长度为500")
+    @ApiModelProperty(value = "备注", name = "remark", dataType = "String")
+    private String remark;
+    /**
+     * 年龄
+     */
+    @Max(value = 2147483647, message = "年龄最大为2147483647")
+    @ApiModelProperty(value = "年龄", name = "age", dataType = "Integer")
+    private Integer age;
+    /**
+     * 工种
+     */
+    @Length(max = 255, message = "工种最大长度为255")
+    @ApiModelProperty(value = "工种", name = "workType", dataType = "String")
+    private String workType;
+    /**
+     * 进场日期
+     */
+    @Length(max = 20, message = "进场日期最大长度为20")
+    @ApiModelProperty(value = "进场日期", name = "personEntryDate", dataType = "String")
+    private String personEntryDate;
+    /**
+     * 在场状态 0=在场 1=不在场
+     */
+    @Max(value = 2147483647, message = "在场状态 0=在场 1=不在场最大为2147483647")
+    @ApiModelProperty(value = "在场状态 0=在场 1=不在场", name = " presentState", dataType = "Integer")
+    private Integer presentState;
+    /**
+     * 户口所在地
+     */
+    @ApiModelProperty(name = "户口所在地", notes = "")
+    private String domicilePlace;
+    /**
+     * 现工作单位或部门
+     */
+    @ApiModelProperty(name = "现工作单位或部门", notes = "")
+    private String workUnits;
+    /**
+     * 从事本工种时间
+     */
+    @ApiModelProperty(name = "从事本工种时间", notes = "")
+    private String typeWorkTime;
+    /**
+     * 应急联系人
+     */
+    @ApiModelProperty(name = "应急联系人", notes = "")
+    private String emergencyPerson;
+    /**
+     * 应急联系电话
+     */
+    @ApiModelProperty(name = "应急联系电话", notes = "")
+    private String emergencyMobile;
+    /**
+     * 出生地
+     */
+    @ApiModelProperty(name = "出生地", notes = "")
+    private String birthplace;
+    /**
+     * 户口所在地
+     */
+    @ApiModelProperty(name = "户口所在地", notes = "")
+    private String residentCity;
+    /**
+     * 工作时间
+     */
+    @ApiModelProperty(name = "工作时间", notes = "")
+    private String workingTime;
+
+    public SysPersonEntity() {
+        this.createTime = DateUtil.getDateTimeNoFormat();
+        this.state = 1;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script> -->
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 8px;
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #4CAF50;
+        }
+
+        p {
+            text-indent: 50px;
+            /* 当 text-align 属性设置为 "justify" 后，将拉伸每一行，
+            以使每一行具有相等的宽度，并且左右边距是直的（就像在杂志和报纸中）： 
+            text-align 属性用于设置文本的水平对齐方式。
+            */
+            text-align: justify;
+            /* text-transform 属性用于指定文本中的大写和小写字母。 */
+            text-transform: capitalize;
+            /* text-indent 属性用于指定文本第一行的缩进： */
+            text-indent: 30px;
+            /* letter-spacing 属性用于指定文本中字符之间的间距。 */
+            letter-spacing: 2px;
+            /* line-height 属性用于指定行之间的间距： */
+            line-height: 1.5;
+            /* word-spacing 属性用于指定文本中单词之间的间距。 */
+            word-spacing: 2px;
+            /* white-space 属性指定元素内部空白的处理方式。此例演示如何禁用元素内的文本换行： */
+            /* white-space: nowrap; */
+            white-space: normal;
+            /* text-shadow 属性为文本添加阴影。 */
+            text-shadow: 2px 0px;
+            /*  font-family 属性规定文本的字体。 */
+            font-family: "Times New Roman", Times, serif;
+            /* font-style 属性主要用于指定斜体文本。 */
+            font-style: italic;
+            /* font-size 属性设置文本的大小。 */
+            font-size: 20px;
+            /* font	简写属性。在一条声明中设置所有字体属性。
+            font-family	规定文本的字体系列（字体族）。
+            font-size	规定文本的字体大小。
+            font-style	规定文本的字体样式。
+            font-variant	规定是否以小型大写字母的字体显示文本。
+            font-weight	规定字体的粗细。 */
+        }
+
+        a {
+            /* 
+            none	默认。定义标准的文本。
+            underline	定义文本下的一条线。
+            overline	定义文本上的一条线。
+            line-through	定义穿过文本下的一条线。
+            blink	定义闪烁的文本。
+            inherit	规定应该从父元素继承 text-decoration 属性的值。 */
+            text-decoration: underline;
+            color: #008CBA;
+        }
+
+        /* 未被访问的链接 */
+        a:link {
+            color: red;
+        }
+
+        /* 已被访问的链接 */
+        a:visited {
+            color: green;
+        }
+
+        /* 将鼠标悬停在链接上 */
+        a:hover {
+            color: hotpink;
+        }
+
+        /* 被选择的链接 */
+        a:active {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>text formatting</h1>
+        <p>This text is styled with some of the text formatting properties. The heading uses the text-align,
+            text-transform, and color properties.
+            The paragraph is indented, aligned, and the space between characters is specified. The underline is removed
+            from this colored
+            <a target="_blank" href="tryit.asp?filename=trycss_text">"Try it Yourself"</a> link.</p>
+        <!-- <i class="fas fa-cloud"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-car"></i>
+        <i class="fas fa-file"></i>
+        <i class="fas fa-bars"></i> -->
+    </div>
+
+</body>
+
+</html>

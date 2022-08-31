@@ -1,0 +1,63 @@
+{
+    "cmpItemName":"安徽门户-码头信息-港口-列表",
+    "interfaceUrl":"/listExternalportdock",
+    "settings":{
+        "title":"港口信息",
+        "queryConfig": {
+            "show": true,
+            "query": {},
+            "params": [
+                {
+                    "targetName": "港口名称",
+                    "targetCode": "nameKeyWord",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "extras":[
+
+        ],
+        "headersConfig":{
+            "showDataConfig":{
+                "content":"FormInformationDetail",
+                "componentType":1,
+                "datasetName":"list",
+                "type":"index",
+                "headerCells":[
+                    {
+                        "label":"港口名称",
+                        "prop":"dockName"
+                    },
+                    {
+                        "label":"可靠港口船只吨位",
+                        "prop":"passability10000tCheck"
+                    },
+                    {
+                        "label":"结构型式",
+                        "prop":"structType"
+                    }
+                ]
+            },
+            "headerCells":[
+
+            ],
+            "formatter":{
+                "baseStyle":{
+                    "fontSize":"14px"
+                },
+                "dots":[
+
+                ]
+            }
+        },
+        "paginationConfig":{
+            "show":true,
+            "totalCode":"totalRows",
+            "pageCode":"page",
+            "pageDefaultVal":1,
+            "pageSizeCode":"pageSize",
+            "pageSizeDefaultVal":10
+        }
+    }
+}

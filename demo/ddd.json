@@ -1,0 +1,52 @@
+// 当前要素的自定义配置项 reserverd 数据名称解释
+//  reserverd: {
+//     // interfaceUrl 数据列表查询接口地址
+//      interfaceUrl: "",
+//     // detailUrl 数据详情查询接口地址
+//      detailUrl: "",
+//     // icon 定位坐标显示图片
+//      icon: null,
+//     // it infoType 数据展示形式 【同要素分类注释（不足之处再补充）】
+//      it: 1,
+//     1、point-info
+//      2、list-tabs-info
+//      3、point-iframe
+//      4、list-point-info
+//      // defaultParams 数据列表默认查询参数赋值，主要适用于分页等；其中others一般都为空
+//      defaultParams: {
+//       p: {
+//     code: "page",
+//     val: 1,
+//         },
+//       ps: {
+//     code: "pageSize",
+//     val: 50,
+//         },
+//       others: [],
+//     },
+//     // qm 数据输入框对应 数据列表查询中的字段 queryKeyMap 的简称，默认值 为 name
+//      qm: "name",
+//     // lm 数据返回列表中，对应的展示值的字段 listKeyMap 的简称，默认值 为 name
+//      lm: "name",
+//     // im 数据详情查询的主键编号简称，idKeyMap 的简称，默认值 为 id
+//      im: "id",
+//      采用新版版本，因为数据data集合中的数据是 ID，但是参数又是 id。蛋疼得一匹
+//      im: { dataCode: "id", paramCode: "id"
+//     },
+//     // 详情中需要显示的字段信息（如果不设置，则剔除nf中的字段即可）默认为空 show fields
+//      sf: [],
+//     // mark 定位坐标点需要确定的字段 默认值 longitude 经度 latitude 纬度 ['longitude','latitude'] point fields
+//      pf: [
+//         "longitude",
+//         "latitude"
+//     ],
+//     // 不需要显示的字段信息 默认值['id','pid','parentId','state','searchType','updateTime'] not show fields
+//      nf: [
+//         "id",
+//         "pid",
+//         "parentId",
+//         "state",
+//         "searchType",
+//         "updateTime"
+//     ],
+// },

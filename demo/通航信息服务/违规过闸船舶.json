@@ -1,0 +1,68 @@
+{
+    "cmpItemName": "安徽通航-船舶过闸信息-违规过闸船舶-列表",
+    "interfaceUrl": "/listShipviolationlockage",
+    "settings": {
+        "title": "违规过闸船舶",
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "query": {},
+            "params": [
+                {
+                    "targetName": "选择日期",
+                    "targetCode": "TimeSection",
+                    "dataType": "TimeSection",
+                    "defaultVal": null
+                },
+                {
+                    "targetName": "标题",
+                    "targetCode": "nameKeyWord",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "content": "FormInformationDetail",
+                "componentType": 1,
+                "datasetName": "list",
+                "type": "index",
+                "headerCells": [
+                    {
+                        "label": "船舶名称",
+                        "prop": "shipName"
+                    },
+                    {
+                        "label": "违规时间",
+                        "prop": "listingTime",
+                        "formatter": "YYYY-MM-DD HH:mm:ss"
+                    },
+                    {
+                        "label": "违规事实",
+                        "prop": "listingReason"
+                    },
+                    {
+                        "label": "处罚情况",
+                        "prop": "statusName"
+                    }
+                ]
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": []
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

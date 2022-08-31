@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function SuperType(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        SuperType.prototype.sx_name = "属性"
+        SuperType.prototype.m_name = function () {
+
+        }
+
+        function SubType(name, age, job) {
+            SuperType.call(this, name, age)
+            this.job = job
+        }
+
+        //无效被下面的MyPerson.prototype 赋值的对象替换成新的原型对象
+        SubType.prototype.allName = function () {
+
+        }
+
+        let object = function (o) {
+            let F = function () {
+            };
+            F.prototype = o;
+            let newF = new F();
+            return newF;
+        }
+        var b = 2
+        if (b == 1) {
+            SubType.prototype.aname = "哈哈哈哈"//修改无效 new SuperType 覆盖了默认的原型链
+
+            console.log(`-----------组合式创建------------------------`)
+            let superType = new SuperType("王五", 22);
+            console.log(`superType: ${superType}`);
+
+            SubType.prototype = superType//原型链上会有name，age
+            SubType.prototype.name = "修改的"//修改了原型链SuperType对象的name
+            SubType.prototype.newName = "新添加的"//原型链中新添加newName属性
+            SubType.prototype.jsName = function () {
+
+            }
+            var mp1 = new SubType("张三", 19, "回家")
+            mp1.name = "对象上的名字";
+            var mp2 = new SubType("李四", 29, "升水")
+            console.log(`-----------mp1.name: ` + mp1.name)//获得SubType对象上的name
+            console.log(`-----------mp1.__proto__.name: ` + mp1.__proto__.name)//获得原型链上的name
+            console.log(`-----------mp2.name` + mp2.name)
+        } else if (b == 2) {
+            console.log(`-----------寄生组合式------------------------`)
+
+            function inPrototype(subType, superType) {
+
+                var prototype = object(superType.prototype)//通过调用函数创新新对象       不发生第二次继承             1理解创建一个超类原型的副本
+                prototype.constructor = subType//constructor属性指向prototype所在函数的指针                   2为创建的副本添加constructor属性
+                subType.prototype = prototype//指向函数的原型对象prototype  new_prototype覆盖了默认的原型对象   3将新创建的对象（即副本）赋值给子类型的原型
+
+            }
+
+            function inheritPrototype(subType, superType) {
+                // SubType.prototype = Object.create(SuperType.prototype, {
+                //     constructor: {
+                //         value: SubType
+                //     }
+                // })
+
+                /* 
+
+                // Object.create 函数的内部实现
+                                Object.create = function (o) {
+                                    let F = function () {
+                
+                                    };
+                                    F.prototype = o;
+                                    let newF = new F();
+                                    return newF;
+                                }
+                 */
+
+                var new_prototype = Object.create(SuperType.prototype)//创建一个对象保存父类的原型对象  不发生第二次继承  1理解创建一个超类原型的副本
+                new_prototype.constructor = SubType//constructor属性指向prototype所在函数的指针                         2为创建的副本添加constructor属性
+                SubType.prototype = new_prototype//指向函数的原型对象prototype  new_prototype覆盖了默认的原型对象        3将新创建的对象（即副本）赋值给子类型的原型
+
+            }
+
+            inPrototype(SubType, SuperType)
+            // inheritPrototype(SubType, SuperType)
+
+
+            SubType.prototype.zhsName = function () {
+
+            }
+
+            // SubType.prototype.name = "张三";
+            // SubType.prototype.age = 19;
+            // SubType.prototype.job = "回家";
+
+            var mp1 = new SubType("张三", 19, "回家")
+            mp1.name = "对象上的名字";
+            var mp2 = new SubType("李四", 29, "升水")
+            console.log(`-----------mp1.name: ` + mp1.name)//获得SubType对象上的name
+            console.log(`-----------mp1.__proto__.name: ` + mp1.__proto__.name)//获得原型链上的name
+            console.log(`-----------mp2.name` + mp2.name)
+
+        }
+
+
+    </script>
+</body>
+
+</html>

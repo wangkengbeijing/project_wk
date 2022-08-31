@@ -1,0 +1,86 @@
+{
+    "cmpItemName": "安徽通道-通航设施尺度航道信息查询列表",
+    "interfaceUrl": "/listChannelInformation",
+    "settings": {
+        "title": "航道信息",
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "query": {},
+            "params": [
+                {
+                    "targetName": "航道名称",
+                    "targetCode": "nameKeyWord",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "type": "index",
+                "datasetName": "list",
+                "headerCells": [
+                    {
+                        "label": "航道名称",
+                        "prop": "channelName"
+                    },
+                    {
+                        "label": "航道等级",
+                        "prop": "hddj"
+                    },
+                    {
+                        "label": "航道起点",
+                        "prop": "startNode"
+                    },
+                    {
+                        "label": "航道迄点",
+                        "prop": "endNode"
+                    },
+                    {
+                        "label": "航道长度",
+                        "prop": "hdcd"
+                    },
+                    {
+                        "label": "管理单位名称",
+                        "prop": "gldwName"
+                    },
+                    {
+                        "label": "航道起点名称",
+                        "prop": "startNodeName"
+                    },
+                    {
+                        "label": "航道迄点名称",
+                        "prop": "endNodeName"
+                    }
+                ]
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": [
+                    {
+                        "propName": "ferryplacemanagername",
+                        "dotStyle": {
+                            "width": "6px",
+                            "height": "6px",
+                            "backgroundColor": "#FF6E6E",
+                            "borderRadius": "50%",
+                            "marginRight": "14px"
+                        }
+                    }
+                ]
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

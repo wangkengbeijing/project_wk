@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>初识Vue</title>
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+
+</head>
+
+<body>
+    <!-- 准备好一个容器 -->
+    <div id="demo">
+        <h1>Hello，{{name.toUpperCase()}}，{{address}}</h1>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+        const person = {
+            name: "Bill",
+            age: 19,
+            city: "Seattle"
+        };
+
+        let txt = "";
+        for (let x in person) {
+           
+            txt += person[x] + " ";
+             console.log("打印x: " + x);
+        };
+
+        function Myclass() {
+            
+        }
+        Myclass.prototype.name = "myclass";
+        var a = new Myclass();
+        console.log(`myclass : ${a.name}`);
+        a.name = "aaa";
+        console.log(`myclass : ${a.name}`);
+        var b = new Myclass();
+        var c = new Myclass();
+
+        Myclass.prototype.hello = function( a ) {
+            
+            return a.name;
+        }
+        console.log(`myclass : ${a.hello(a)}`);
+
+        const myArray = Object.values(person);
+        console.log("打印myArray: " + myArray);
+        //创建Vue实例
+        new Vue({
+            el: '#demo', //el用于指定当前Vue实例为哪个容器服务，值通常为css选择器字符串。
+            data: { //data中用于存储数据，数据供el所指定的容器去使用，值我们暂时先写成一个对象。
+                name: 'atguigu',
+                address: '北京'
+            } 
+        })
+
+    </script>
+</body>
+
+</html>

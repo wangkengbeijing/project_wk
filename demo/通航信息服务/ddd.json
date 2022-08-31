@@ -1,0 +1,54 @@
+{
+    "cmpItemName": "用户互动-互动热线",
+    "title": "互动热线",
+    "isBack": false,
+    "labelStyle": {
+        "width": "180px"
+    },
+    "list": [
+        {
+            "label": "政务值班服务电话:",
+            "startWork": "0771—2823119",
+            "offDuty": "13877190160",
+            "startName": "上班",
+            "offName": "下班",
+            "span": 2,
+            "img_src": "#7b5feb",
+            "bg_color": "#7b5feb",
+            "type": 1
+        },
+        {
+            "label": "扫黑除恶举报电话:",
+            "name": "0771-2115605",
+            "span": 2,
+            "img_src": "#7F9ECF",
+            "bg_color": "#7F9ECF",
+            "type": 2
+        },
+        {
+            "label": "港口航运管理处服务电话:",
+            "name": "0771—2115645",
+            "span": 2,
+            "img_src": "#3281FF",
+            "bg_color": "#3281FF",
+            "type": 3
+        },
+        {
+            "label": "航道管理处:",
+            "name": "0771—2115324",
+            "span": 2,
+            "img_src": "#00B99C",
+            "bg_color": "#00B99C",
+            "type": 4
+        },
+        {
+            "label": "船舶检验处:",
+            "name": "0771—2115352",
+            "span": 2,
+            "img_src": "#FF6600",
+            "bg_color": "#FF6600",
+            "type": 5
+        }
+    ]
+}
+

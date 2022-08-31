@@ -1,0 +1,27 @@
+{
+    "cmpItemName": "用户互动-互动热线",
+    "title": "互动热线",
+    "isBack": false,
+    "labelStyle": {
+        "width": "180px"
+    },
+    "list": [
+        
+        {
+            "label": "引江济淮集团",
+            "name": "0551—65722572",
+            "span": 2,
+            "img_src": "#00B99C",
+            "bg_color": "#00B99C",
+            "type": 4
+        },
+        {
+            "label": "安徽省引江济淮集团有限公司肥西建管处",
+            "name": "0551—68830625",
+            "span": 2,
+            "img_src": "#FF6600",
+            "bg_color": "#FF6600",
+            "type": 5
+        }
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "cmpItemName": "安徽通道-水位预报-列表",
+    "interfaceUrl": "/getStageForecasting",
+    "settings": {
+        "title": "水位预报",
+        "isBorder": false,
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "params": [
+                {
+                    "targetName": "选择日期",
+                    "targetCode": "TimeSection",
+                    "dataType": "TimeSection",
+                    "defaultVal": null
+                },
+                {
+                    "targetName": "水位站",
+                    "targetCode": "stationName",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "type": "index",
+                "datasetName": "list",
+                "headerCells": [
+                    {
+                        "label": "水位站名称",
+                        "prop": "stageName"
+                    },
+                    {
+                        "label": "基面",
+                        "prop": "baseLevel"
+                    },
+                    {
+                        "label": "预测开始时间",
+                        "prop": "forecaseBeginTime"
+                    },
+                    {
+                        "label": "第一天水位",
+                        "prop": "firstDayWaterLevel"
+                    },
+                    {
+                        "label": "第二天水位",
+                        "prop": "secondDayWaterLevel"
+                    },
+                    {
+                        "label": "第三天水位",
+                        "prop": "thirdDayWaterLevel"
+                    },
+                    {
+                        "label": "第四天水位",
+                        "prop": "forthDayWaterLevel"
+                    },
+                    {
+                        "label": "第五天水位",
+                        "prop": "fifthDayWaterLevel"
+                    },
+                    {
+                        "label": "第六天水位",
+                        "prop": "sixthDayWaterLevel"
+                    },
+                    {
+                        "label": "第七天水位",
+                        "prop": "seventhDayWaterLevel"
+                    }
+                ]
+            },
+            "headerRowStyle": {
+                "background": "#F8FAFD",
+                "min-height": "40px"
+            },
+            "headerCellStyle": {
+                "font-weight": 600,
+                "color": "#17243B",
+                "fontSize": "14px"
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": [
+                    {
+                        "propName": "ferryplacemanagername",
+                        "dotStyle": {
+                            "width": "6px",
+                            "height": "6px",
+                            "backgroundColor": "#FF6E6E",
+                            "borderRadius": "50%",
+                            "marginRight": "14px"
+                        }
+                    }
+                ]
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

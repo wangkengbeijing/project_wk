@@ -1,0 +1,81 @@
+{
+    "cmpItemName": "安徽通道-航道气象列表",
+    "interfaceUrl": "/groupWeatherDateListPage",
+    "settings": {
+        "title": "航道气象",
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "query": {},
+            "params": [
+                {
+                    "targetName": "时间范围",
+                    "targetCode": "TimeSection",
+                    "dataType": "TimeSection",
+                    "defaultVal": null
+                }
+                
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "content": "ChannelWeatherDetail",
+                "componentType": 1,
+                "componentConfig": {
+                    "type": 0,
+                    "titleList": [
+                        {
+                            "name": "发布时间",
+                            "param": "publishDate",
+                            "formatter": "YYYY-MM-DD HH:mm:ss"
+                        },
+                        {
+                            "name": "发布人",
+                            "param": "publishUser"
+                        }
+                    ]
+                },
+                "datasetName": "list",
+                "type": "index",
+                "headerCells": [
+                    {
+                        "label": "标题",
+                        "prop": "weatherDateName"
+                    },
+                    {
+                        "label": "时间",
+                        "prop": "weatherDate",
+                        "width": 200,
+                        "formatter": "YYYY-MM-DD"
+                    }
+                ]
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": [
+                    {
+                        "propName": "ferryplacemanagername",
+                        "dotStyle": {
+                            "width": "6px",
+                            "height": "6px",
+                            "backgroundColor": "#FF6E6E",
+                            "borderRadius": "50%",
+                            "marginRight": "14px"
+                        }
+                    }
+                ]
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

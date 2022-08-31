@@ -1,0 +1,49 @@
+{
+    "icon": {
+        "type": "img",
+        "unchecked": "/assets/portalsite/map/direct-icons/icon-tong-han-gong-gao.png",
+        "checked": "/assets/portalsite/map/direct-icons/icon-tong-han-gong-gao-checked.png",
+        "class": "iconfont icon-shuiweizhan_all"
+    },
+    "pf": [
+        "longitude",
+        "latitude"
+    ],
+    "nf": [
+        "id",
+        "pid",
+        "parentId",
+        "state",
+        "searchType",
+        "updateTime",
+        "BUILD_TIME",
+        "collectType"
+    ],
+    "details": {
+        "url": "/navigationInfoDetail",
+        "param": [
+            "id"
+        ]
+    },
+    "dataConfig": [
+        {
+            "code": "title",
+            "name": ""
+        },
+        {
+            "code": "publishDate",
+            "name": "发布时间"
+        }
+        
+    ],
+    "otherParam": [
+        {
+            "code": "name",
+            "defVal": ""
+        }
+    ],
+    "it": 104,
+    "isSecond": false,
+    "showType": 2,
+    "type": 4
+}

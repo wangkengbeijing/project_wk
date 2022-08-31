@@ -1,0 +1,227 @@
+package com.ienc.platform.modules.categories.entity;
+
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.Max;
+import java.io.Serializable;
+
+/**
+ * 三类人员管理表
+ *
+ * @author xiehui
+ * @email okxiehui@gmail.com
+ * @date 2021-12-11 09:48:50
+ */
+@Data
+@TableName("t_categories_person")
+@ApiModel(value = "CategoriesPerson")
+public class CategoriesPersonEntity implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * 主键
+     */
+    @TableId
+    @Length(max = 36, message = "主键最大长度为36")
+    @ApiModelProperty(value = "主键", name = "id", dataType = "String")
+    private String id;
+    /**
+     * 人员id
+     */
+    @Length(max = 36, message = "人员id最大长度为36")
+    @ApiModelProperty(value = "人员id", name = "personId", dataType = "String")
+    private String personId;
+    /**
+     * 人员名称
+     */
+    @Length(max = 200, message = "人员名称最大长度为200")
+    @ApiModelProperty(value = "人员名称", name = "personName", dataType = "String")
+    private String personName;
+    /**
+     * 项目部id
+     */
+    @Length(max = 36, message = "项目部id最大长度为36")
+    @ApiModelProperty(value = "项目部id", name = "itemId", dataType = "String")
+    private String itemId;
+    /**
+     * 项目部名称
+     */
+    @Length(max = 36, message = "项目部名称最大长度为36")
+    @ApiModelProperty(value = "项目部名称", name = "itemName", dataType = "String")
+    private String itemName;
+    /**
+     * 性别
+     */
+    @Length(max = 20, message = "性别最大长度为20")
+    @ApiModelProperty(value = "性别", name = "sex", dataType = "String")
+    private String sex;
+    /**
+     * 出生日期
+     */
+    @Length(max = 20, message = "出生日期最大长度为20")
+    @ApiModelProperty(value = "出生日期", name = "birthday", dataType = "String")
+    private String birthday;
+    /**
+     * 学历
+     */
+    @Length(max = 255, message = "学历最大长度为255")
+    @ApiModelProperty(value = "学历", name = "education", dataType = "String")
+    private String education;
+    /**
+     * 所学专业
+     */
+    @Length(max = 300, message = "所学专业最大长度为300")
+    @ApiModelProperty(value = "所学专业", name = "profession", dataType = "String")
+    private String profession;
+    /**
+     * 安全工作年限
+     */
+    @Max(value = 2147483647, message = "安全工作年限最大为2147483647")
+    @ApiModelProperty(value = "安全工作年限", name = "safeWorkYears", dataType = "Integer")
+    private String safeWorkYears;
+    /**
+     * 职务/职称等级（特种作业持证岗位）
+     */
+    @Length(max = 200, message = "职务/职称等级（特种作业持证岗位）最大长度为200")
+    @ApiModelProperty(value = "职务/职称等级（特种作业持证岗位）", name = "post", dataType = "String")
+    private String post;
+    /**
+     * 从业资格证编号
+     */
+    @Length(max = 100, message = "从业资格证编号最大长度为100")
+    @ApiModelProperty(value = "从业资格证编号", name = "certNo", dataType = "String")
+    private String certNo;
+    /**
+     * 所在工程
+     */
+    @Length(max = 255, message = "所在工程最大长度为255")
+    @ApiModelProperty(value = "所在工程", name = "engineering", dataType = "String")
+    private String engineering;
+    /**
+     * 用工性质
+     */
+    @Length(max = 255, message = "用工性质最大长度为255")
+    @ApiModelProperty(value = "用工性质", name = "workType", dataType = "String")
+    private String workType;
+    /**
+     * 证书类别
+     */
+    @Length(max = 100, message = "证书类别最大长度为100")
+    @ApiModelProperty(value = "证书类别", name = "category", dataType = "String")
+    private String category;
+    /**
+     * 取证时间（发证时间）
+     */
+    @Length(max = 20, message = "取证时间（发证时间）最大长度为20")
+    @ApiModelProperty(value = "取证时间（发证时间）", name = "pubTime", dataType = "String")
+    private String pubTime;
+    /**
+     * 证书有效期截止日
+     */
+    @Length(max = 20, message = "证书有效期截止日最大长度为20")
+    @ApiModelProperty(value = "证书有效期截止日", name = "validEndTime", dataType = "String")
+    private String validEndTime;
+    /**
+     * 行业
+     */
+    @Length(max = 255, message = "行业最大长度为255")
+    @ApiModelProperty(value = "行业", name = "industry", dataType = "String")
+    private String industry;
+    /**
+     * 职称（房建三类）
+     */
+    @Length(max = 255, message = "职称（房建三类）最大长度为255")
+    @ApiModelProperty(value = "职称（房建三类）", name = "title", dataType = "String")
+    private String title;
+    /**
+     * 所属公司
+     */
+    @Length(max = 255, message = "所属公司最大长度为255")
+    @ApiModelProperty(value = "所属公司", name = "companyName", dataType = "String")
+    private String companyName;
+    /**
+     * 数据类型 1=特种作业 2=水运三类 3=房建三类 4=安全管理
+     */
+    @Max(value = 2147483647, message = "数据类型 1=特种作业 2=水运三类 3=房建三类 4=安全管理最大为2147483647")
+    @ApiModelProperty(value = "数据类型 1=特种作业 2=水运三类 3=房建三类 4=安全管理", name = "sourceType", dataType = "Integer")
+    private Integer sourceType;
+    /**
+     * 创建时间
+     */
+    @Length(max = 20, message = "创建时间最大长度为20")
+    @ApiModelProperty(value = "创建时间", name = "createTime", dataType = "String")
+    private String createTime;
+    /**
+     * 创建人
+     */
+    @Length(max = 36, message = "创建人最大长度为36")
+    @ApiModelProperty(value = "创建人", name = "createUser", dataType = "String")
+    private String createUser;
+    /**
+     * 创建时间
+     */
+    @Length(max = 20, message = "创建时间最大长度为20")
+    @ApiModelProperty(value = "创建时间", name = "updateTime", dataType = "String")
+    private String updateTime;
+    /**
+     * 更新人
+     */
+    @Length(max = 36, message = "更新人最大长度为36")
+    @ApiModelProperty(value = "更新人", name = "updateUser", dataType = "String")
+    private String updateUser;
+    /**
+     * 状态 0=删除 1=正常
+     */
+    @Max(value = 2147483647, message = "状态 0=删除 1=正常最大为2147483647")
+    @ApiModelProperty(value = "状态 0=删除 1=正常", name = "state", dataType = "Integer")
+    private Integer state;
+    /**
+     * 部门id
+     */
+    @Length(max = 36, message = "部门id最大长度为36")
+    @ApiModelProperty(value = "部门id", name = "deptId", dataType = "String")
+    private String deptId;
+    /**
+     * 组织机构id
+     */
+    @Length(max = 36, message = "组织机构id最大长度为36")
+    @ApiModelProperty(value = "组织机构id", name = "orgId", dataType = "String")
+    private String orgId;
+    /**
+     * 创建人personId
+     */
+    @ApiModelProperty(value = "创建人personId", name = "createPersonId", dataType = "String")
+    private String createPersonId;
+    /**
+     * 证书类型 1=A类 2=B类 3=C类
+     */
+    @ApiModelProperty(name = "证书类型 1=A类 2=B类 3=C类", notes = "")
+    private int type;
+    /**
+     * 发证单位
+     */
+    @ApiModelProperty(name = "发证单位",value = "issueUnit", notes = "")
+    private String issueUnit;
+    /**
+     * 初次领证时间
+     */
+    @ApiModelProperty(name = "初次领证时间", notes = "")
+    private String firstLicenseTime;
+    /**
+     * 换证时间
+     */
+    @ApiModelProperty(name = "换证时间", notes = "")
+    private String renewalTime;
+
+    /** 复审日期 */
+    @ApiModelProperty(name = "复审日期",notes = "")
+    private String reviewDate ;
+    /** 操作类别/工种 */
+    @ApiModelProperty(name = "操作类别/工种",notes = "")
+    private String actionType ;
+}

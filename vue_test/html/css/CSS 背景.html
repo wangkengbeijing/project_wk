@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            padding: 20px;
+            /* 简写
+            border 属性是以下各个边框属性的简写属性：
+            border-width
+            border-style（必需）
+            border-color */
+
+            /* border: 20px dotted #92b901; */
+            border-style: dotted;
+            border-width: 20px;
+            border-color: #92b901;
+            border-radius: 60px;
+            outline-style: dotted;
+            outline-width: 20px;
+            background-color: yellow;
+
+
+
+            /* 规定背景的绘制区域。 */
+            background-clip: padding-box;
+            /* 设置元素的背景图像。 */
+            background-image: url('https://static.runoob.com/images/mix/img_tree.png');
+            /* 设置背景图像是否及如何重复。 */
+            background-repeat: no-repeat;
+            /* 规定在何处放置背景图像。 */
+            background-origin: content-box;
+            background-size: auto;
+            /* 设置背景图像的开始位置。 */
+            background-position: right top;
+            /* background: #ffffff url("https://static.runoob.com/images/mix/img_tree.png") no-repeat right top; */
+            /* background-attachment: fixed; */
+
+            /* 在使用简写属性时，属性值的顺序为：
+            属性值之一缺失并不要紧，只要按照此顺序设置其他值即可。请注意，在上面的例子中，
+            我们没有使用 background-attachment 属性，因为它没有值。
+            background-color
+            background-image
+            background-repeat
+            background-attachment
+            background-position */
+
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 150px;
+            margin-left: 80px;
+
+
+            padding: 25px 50px 75px 100px;
+            /* 上内边距是 25px
+            右内边距是 50px
+            下内边距是 75px
+            左内边距是 100px */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        background 在一条声明中设置所有背景属性的简写属性。<br />
+        background-attachment 设置背景图像是固定的还是与页面的其余部分一起滚动。<br />
+        background-clip 规定背景的绘制区域。<br />
+        background-color 设置元素的背景色。<br />
+        background-image 设置元素的背景图像。<br />
+        background-origin 规定在何处放置背景图像。<br />
+        background-position 设置背景图像的开始位置。<br />
+        background-repeat 设置背景图像是否及如何重复。<br />
+        background-size 规定背景图像的尺寸。
+    </div>
+
+</body>
+
+</html>

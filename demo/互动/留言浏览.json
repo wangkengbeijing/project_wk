@@ -1,0 +1,64 @@
+{
+    "cmpItemName": "安徽用户互动-留言浏览-列表",
+    "interfaceUrl": "/interactionList",
+    "settings": {
+        "title": "留言浏览",
+        "extras": [],
+        "queryConfig": {
+            "show": true,
+            "query": {},
+            "params": [
+                {
+                    "targetName": "选择日期",
+                    "targetCode": "TimeSection",
+                    "dataType": "TimeSection",
+                    "defaultVal": null
+                },
+                {
+                    "targetName": "标题名称",
+                    "targetCode": "nameKeyWord",
+                    "dataType": "String",
+                    "defaultVal": null
+                }
+            ]
+        },
+        "headersConfig": {
+            "showDataConfig": {
+                "content": "MessageDetail",
+                "componentType": 1,
+                "componentConfig": {
+                    "titleProp": "title"
+                },
+                "datasetName": "list",
+                "type": "index",
+                "headerCells": [
+                    {
+                        "label": "标题",
+                        "prop": "title"
+                    },
+                    {
+                        "label": "时间",
+                        "prop": "createTime",
+                        "formatter": "YYYY-MM-DD",
+                        "width": 200
+                    }
+                ]
+            },
+            "headerCells": [],
+            "formatter": {
+                "baseStyle": {
+                    "fontSize": "14px"
+                },
+                "dots": []
+            }
+        },
+        "paginationConfig": {
+            "show": true,
+            "totalCode": "totalRows",
+            "pageCode": "page",
+            "pageDefaultVal": 1,
+            "pageSizeCode": "pageSize",
+            "pageSizeDefaultVal": 10
+        }
+    }
+}

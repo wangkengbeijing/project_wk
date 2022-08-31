@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* 优先级关系：内联样式 > ID 选择器 > 类选择器 = 属性选择器 = 伪类选择器 > 标签选择器 = 伪元素选择器 */
+        .flex-container {
+            display: flex;
+            align-items: stretch;
+            background-color: #f1f1f1;
+        }
+
+        .flex-container>div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .dflexgrow1 {
+            flex-grow: 0;
+            width: 100%;
+        }
+
+        .dflexgrow2 {
+            flex-grow: 1;
+        }
+
+        .dflexgrow3 {
+
+            flex-grow: 2;
+        }
+
+        .center {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            background-color: blue;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>flex 属性</h1>
+    <!-- flex 属性是 flex-grow、flex-shrink 和 flex-basis 属性的简写属性。
+实例
+使第三个弹性项目不可增长（0），不可收缩（0），且初始长度为 200 像素： -->
+
+    <p>使第三个弹性项目不可增长（0），不可收缩（0），且初始长度为 200 像素：</p>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div style="flex-basis: 200px">2</div>
+        <div style="flex: 1 0 100px">3</div>
+        <div>4</div>
+    </div>
+    <!-- 使第三个弹性项目的增长速度比其他弹性项目快八倍： -->
+    <div class="flex-container">
+        <div class="dflexgrow1">1</div>
+        <div class="dflexgrow2">2</div>
+        <!-- <div class="dflexgrow3">3</div> -->
+    </div>
+
+    <!-- auto	等同于 1 1 auto。
+        initial	等同于 0 1 auto。参阅 initial。
+        none	等同于 0 0 auto。
+        inherit	从其父元素继承该属性。参阅 inherit。 -->
+    <div class="flex-container">
+        <div style="flex:auto">1</div>
+        <div style="flex:initial">2</div>
+        <div style="flex:none">3</div>
+    </div>
+    <div class="center">居中</div>
+</body>
+
+</html>
